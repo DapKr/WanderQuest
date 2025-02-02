@@ -294,6 +294,15 @@ form{
     outline: 2px solid white;
 }
 
+#searchResults{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+    width: 100%;
+    margin-top: 50px;
+
+}
 .result{
     width: 500px;
     height: 220px;
@@ -302,4 +311,12 @@ form{
     overflow: hidden;
     background-color: #0a03279b;
     display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.result img {
+    width: 100%;             /* Scale the width to 100% of parent */
+    height: 30%;            /* Scale the height to 100% of parent */
+    object-fit: cover;       /* Cover the entire div area */
 }
