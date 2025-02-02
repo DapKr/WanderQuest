@@ -1,0 +1,305 @@
+/* Fonts */
+.poppins-extralight {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    color: white;
+    background-image: url("./Thailand.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.overlay {
+    position: absolute; /* Positioning relative to the hero area */
+    width: 100%; /* Adjust width */
+    height: 100%; /* Adjust height */
+    background: linear-gradient(to right, #0a0327b7 0%, #0a032700 80%, #0a032700 100%); /* Gradient overlay */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+nav {
+    background-color: #0a0327ec;
+    color: antiquewhite;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/*logo placement*/
+#logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logoimg {
+    width: fit-content;
+    height: 40px;
+    margin-right: 12px;
+}
+
+#logoText {
+    font-size: 24px;
+    font-weight: 200;
+}
+
+/*Right side navigation*/
+#navFunctions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#navTabs a {
+    color: antiquewhite;
+    text-decoration: none;
+    margin-right: 12px;
+}
+
+#navTabs a:hover {
+    color: white;
+    font-weight: 700;
+}
+
+.navTabActive {
+    color: white;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border-radius: 16px;
+
+}
+
+#searchBar input {
+    border: solid 0px white;
+    margin-right: 8px;
+    font-size: 16px;
+    color: rgb(70, 70, 71);
+    width: 200px;
+}
+
+#searchBar input:focus {
+    outline: none;
+}
+
+#searchBar button {
+    border: 0px;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#socialMedia{
+    height: 100%;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.socialIcon{
+    width: 32px;
+    height: 32px;
+    margin-top: 8px;
+}
+
+#line{
+    width: 1px;
+    background-color: white;
+    height: 50%;
+    margin-bottom: 32px;
+}
+
+#intro{
+    margin-top: 150px;
+    margin-left: 200px;
+    width: 40%;
+    color: white;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.primaryBtn{
+    background-color: #0a0327d2;
+    font-size: 18px;
+    border-radius: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    border: 1px solid white;
+    color: white;
+    margin-top: 12px;
+}
+
+.primaryBtn:hover{
+    background-color: #3d1acaf4;
+}
+
+.primaryBtn:active{
+    background-color: #461af3f4;
+}
+
+#aboutPage{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.content{
+    width: 40%;
+}
+
+h1{
+    font-size: 56px;
+    font-weight: 700;
+}
+
+#teamContainer{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+#teamCards{
+    display: flex;
+    gap: 20px;
+}
+
+#teamContainer h2{
+    line-height: 0%;
+}
+
+.teamCard{
+    width: 500px;
+    height: 220px;
+    border: 1px solid white;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #0a03279b;
+    display: flex;
+}
+
+.memberImg {
+    width: 30%;            /* Set the desired width */
+    height: 100%;           /* Set the desired height */
+    overflow: hidden;        /* Hide any overflowing parts of the image */
+}
+
+.memberImg img {
+    width: 100%;             /* Scale the width to 100% of parent */
+    height: 100%;            /* Scale the height to 100% of parent */
+    object-fit: cover;       /* Cover the entire div area */
+}
+
+.memberDetails{
+    padding: 12px;
+    width: 70%;
+}
+
+.memberName{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.memberJob{
+    line-height: 0%;
+}
+
+.memberTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 4px; /* Adjust the gap between flex items */
+    margin: 0;         /* Remove default margins */
+    padding: 0;
+}
+
+form{
+    width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 150px;
+    margin-left: 150px;
+    align-items: end;
+}
+.inputContainer{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+.inputField{
+    background-color: rgba(255, 255, 255, 0.434);
+    border: 1px solid white;
+    color: white;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 8px;
+}
+
+.inputField:focus{
+    outline: 2px solid white;
+}
+
+.result{
+    width: 500px;
+    height: 220px;
+    border: 1px solid white;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #0a03279b;
+    display: flex;
+}

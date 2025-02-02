@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>WanderQuest</title>
+  <link rel="stylesheet" href="./travel_recommendation.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div id="logo">
+      <img src="./plane.svg" id="logoimg">
+      <span id="logoText">WanderQuest</span>
+    </div>
+    <div id="navFunctions">
+        <div id="searchBar">
+            <input type="text" id="searchInput" placeholder="Search for a destination">
+            <button id="btnSearch"><img src="search.svg"></button>
+            <button id="btnClear"><img src="clear.svg"></button>
+          </div>
+      <div id="navTabs">
+        <a href="./index.html" id="home" class="navTabActive">Home</a>
+        <a href="./travel_about.html" id="about">About Us</a>
+        <a href="./travel_contact.html" id="contact">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+  <div class="overlay">
+    <div id="socialMedia">
+      <div id="line"></div>
+      <a href="https://x.com/?mx=2" target="_blank"><img src="./social/twitter.svg" class="socialIcon"></a>
+      <a href="https://www.facebook.com/" target="_blank"><img src="./social/facebook.svg" class="socialIcon"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="./social/instagram.svg" class="socialIcon"></a>
+      <a href="https://www.whatsapp.com/" target="_blank"><img src="./social/whatsapp.svg" class="socialIcon"></a>
+    </div>
+    <div id="intro">
+      <h2>Explore the World, One Hidden Gem at a Time</h2>
+      <p>Welcome to WanderQuest, your ultimate travel companion designed to ignite your wanderlust! We specialize in
+        uncovering the world's most breathtaking destinations, from bustling cities to serene beaches and everything in
+        between. With meticulously curated travel guides, insider tips, and unique experiences, we empower travelers to
+        explore off-the-beaten-path locations while making unforgettable memories.</p>
+      <button id="bookBtn" class="primaryBtn">BOOK NOW</button>
+    </div>
+  </div>
+  <div id="searchResults">
+</div>
+  <script src="./travel_recommendation.js"></script>
+</body>
+
+</html>
