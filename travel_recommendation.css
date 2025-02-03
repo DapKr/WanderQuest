@@ -325,6 +325,7 @@ form{
     margin-top: 50px;
 
 }
+
 .result{
     width: 500px;
     height: 360px;
@@ -354,4 +355,17 @@ form{
 .resultContent p{
     line-height: 20px;
     margin: 0;
+}
+
+.noResult{
+    width: 500px;
+    height: fit-content;
+    border: 1px solid white;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #0a03279b;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+    padding: 12px;
 }

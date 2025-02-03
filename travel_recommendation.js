@@ -22,6 +22,15 @@ function createResultDiv(container, imageUrl, innerContent, button) {
     container.appendChild(resultDiv);
 }
 
+/*function createNoResultDiv(container, textContent) {
+    const noResultDiv = document.createElement('div');
+    noResultDiv.className = 'noResult';
+    noResultDiv.textContent = 'No results found';
+
+    container.appendChild(resultDiv);
+
+}*/
+
 function searchLocation() {
     const input = document.getElementById('searchInput').value.toLowerCase();
     const resultContainer = document.getElementById('searchResults');
@@ -58,12 +67,21 @@ function searchLocation() {
             }
 
             if (!foundResults) {
-                createResultDiv(resultContainer, '<p>No results found.</p>');
-            }
+                    const noResultDiv = document.createElement('div');
+                    noResultDiv.className = 'noResult';
+                    noResultDiv.innerHTML = 'No results found';
+
+                    resultContainer.appendChild(noResultDiv);
+                }
         })
         .catch(error => {
             console.error('Error:', error);
-            createResultDiv(resultContainer, 'An error occurred while fetching data.');
+            const errorResultDiv = document.createElement('div');
+                    errorResultDiv.className = 'noResult';
+                    errorResultDiv.innerHTML = 'An error occurred while fetching data.';
+
+                    resultContainer.appendChild(errorResultDiv);
+            //createResultDiv(resultContainer,"", 'An error occurred while fetching data.');
         });
 }
 
