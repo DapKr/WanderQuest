@@ -21,8 +21,9 @@
 
 html,
 body {
-    height: 100%;
+    height: 100vh;
     margin: 0;
+    overflow: hidden;
 }
 
 body {
@@ -31,19 +32,23 @@ body {
     font-style: normal;
     font-size: 16px;
     color: white;
-    background-image: url("./Thailand.jpeg");
+    background-image: linear-gradient(to right, #0a0327b7 0%, #0a032700 80%, #0a032700 100%), url("./Thailand.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
 }
 
+.layout{
+    display: flex;
+}
+
 .overlay {
-    position: absolute; /* Positioning relative to the hero area */
-    width: 100%; /* Adjust width */
-    height: 100%; /* Adjust height */
-    background: linear-gradient(to right, #0a0327b7 0%, #0a032700 80%, #0a032700 100%); /* Gradient overlay */
+    /*position: absolute; /* Positioning relative to the hero area 
+    width: 100%; /* Adjust width 
+    height: 100%; /* Adjust height 
+    background: linear-gradient(to right, #0a0327b7 0%, #0a032700 80%, #0a032700 100%); /* Gradient overlay 
     background-size: cover;
-    background-position: center;
+    background-position: center;*/
     display: flex;
 }
 
@@ -213,9 +218,16 @@ h2{
     display: flex;
     flex-direction: column;
     width: 100%;
+    padding-left: 56px;
 }
 
-.content{
+#contactContent{
+    width: 100%;
+    padding-left: 56px;
+    margin-right: 160px;
+}
+
+#aboutContent{
     width: 40%;
 }
 
@@ -320,15 +332,17 @@ form{
     display: flex;
     flex-direction: column;
     align-items: end;
-    gap: 20px;
     width: 100%;
     margin-top: 20px;
-
+    height: 88vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .result{
     width: 500px;
     height: 380px;
+    flex-shrink: 0;
     border: 1px solid white;
     border-radius: 12px;
     overflow: hidden;
@@ -336,6 +350,7 @@ form{
     display: flex;
     flex-direction: column;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .result img {
