@@ -67,7 +67,7 @@ function searchLocation() {
                         );
                     });
                 });
-            } else {
+            }); else {
                 const foundCountry = data.countries.find(country =>
                     country.name.toLowerCase() === input
                 );
