@@ -55,6 +55,10 @@ function searchLocation() {
                     const { formattedDate, formattedTime } = getLocalTime(temple.timeZone);
                     createResultDiv(resultContainer, temple.imageUrl, `<h3>${temple.name}</h3><p>${temple.description}</p><p>${formattedDate} ${formattedTime}</p>`);
                 });
+            } else if (input.includes('country')) {
+                data.countries.forEach(country => {
+                    foundResults = true;
+                    createResultDiv(resultContainer, country.imageUrl, `<h3>${country.name}</h3><p>${country.description}</p><p>${formattedDate} ${formattedTime}</p>`);
             } else {
                 const foundCountry = data.countries.find(country =>
                     country.name.toLowerCase() === input
