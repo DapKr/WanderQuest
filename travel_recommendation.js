@@ -63,7 +63,7 @@ function searchLocation() {
                         createResultDiv(
                             resultContainer,
                             city.imageUrl,
-                            `<h3>${city.name}</h3><p>${city.description}</p>${city.description}</p><p>${formattedDate} ${formattedTime}</p>`
+                            `<h3>${city.name}</h3><p>${city.description}</p><p>${formattedDate} ${formattedTime}</p>`
                         );
                     });
                 });
