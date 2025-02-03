@@ -322,13 +322,13 @@ form{
     align-items: end;
     gap: 20px;
     width: 100%;
-    margin-top: 50px;
+    margin-top: 20px;
 
 }
 
 .result{
     width: 500px;
-    height: 360px;
+    height: 380px;
     border: 1px solid white;
     border-radius: 12px;
     overflow: hidden;
@@ -340,7 +340,7 @@ form{
 
 .result img {
     width: 100%;             /* Scale the width to 100% of parent */
-    height: 60%;            /* Scale the height to 100% of parent */
+    height: 54%;            /* Scale the height to 100% of parent */
     object-fit: cover;       /* Cover the entire div area */
 }
 
@@ -353,7 +353,7 @@ form{
 }
 
 .resultContent p{
-    line-height: 20px;
+    line-height: 24px;
     margin: 0;
 }
 

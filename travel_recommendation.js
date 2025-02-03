@@ -22,14 +22,13 @@ function createResultDiv(container, imageUrl, innerContent, button) {
     container.appendChild(resultDiv);
 }
 
-/*function createNoResultDiv(container, textContent) {
-    const noResultDiv = document.createElement('div');
-    noResultDiv.className = 'noResult';
-    noResultDiv.textContent = 'No results found';
-
-    container.appendChild(resultDiv);
-
-}*/
+function getLocalTime(timeZone) {
+    const currentUtc = moment.utc(); // Current time in UTC
+    const localDate = currentUtc.tz(timeZone); // Convert to local time
+    const formattedDate = localDate.format('ddd, MMM D, YYYY'); // Format date
+    const formattedTime = localDate.format('HH:mm:ss'); // Format time
+    return { formattedDate, formattedTime }; // Return both formatted date and time
+}
 
 function searchLocation() {
     const input = document.getElementById('searchInput').value.toLowerCase();
@@ -47,12 +46,14 @@ function searchLocation() {
             if (input.includes('beach')) {
                 data.beaches.forEach(beach => {
                     foundResults = true;
-                    createResultDiv(resultContainer, beach.imageUrl, `<h3>${beach.name}</h3><p>${beach.description}</p>`);
+                    const { formattedDate, formattedTime } = getLocalTime(beach.timeZone);
+                    createResultDiv(resultContainer, beach.imageUrl, `<h3>${beach.name}</h3><p>${beach.description}</p><p>${formattedDate} ${formattedTime}</p>`);
                 });
             } else if (input.includes('temple')) {
                 data.temples.forEach(temple => {
                     foundResults = true;
-                    createResultDiv(resultContainer, temple.imageUrl, `<h3>${temple.name}</h3><p>${temple.description}</p>`);
+                    const { formattedDate, formattedTime } = getLocalTime(temple.timeZone);
+                    createResultDiv(resultContainer, temple.imageUrl, `<h3>${temple.name}</h3><p>${temple.description}</p><p>${formattedDate} ${formattedTime}</p>`);
                 });
             } else {
                 const foundCountry = data.countries.find(country =>
@@ -61,7 +62,8 @@ function searchLocation() {
                 if (foundCountry) {
                     foundResults = true;
                     foundCountry.cities.forEach(city => {
-                        createResultDiv(resultContainer, city.imageUrl, `<h3>${city.name}</h3><p>${city.description}</p>`);
+                        const { formattedDate, formattedTime } = getLocalTime(city.timeZone);
+                        createResultDiv(resultContainer, city.imageUrl, `<h3>${city.name}</h3><p>${city.description}</p><p>${formattedDate} ${formattedTime}</p>`);
                     });
                 }
             }
@@ -81,7 +83,6 @@ function searchLocation() {
                     errorResultDiv.innerHTML = 'An error occurred while fetching data.';
 
                     resultContainer.appendChild(errorResultDiv);
-            //createResultDiv(resultContainer,"", 'An error occurred while fetching data.');
         });
 }
 
