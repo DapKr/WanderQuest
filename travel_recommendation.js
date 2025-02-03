@@ -60,11 +60,7 @@ function searchLocation() {
                     country.cities.forEach(city => {
                         foundResults = true;
                         const { formattedDate, formattedTime } = getLocalTime(city.timeZone);
-                        createResultDiv(
-                            resultContainer,
-                            city.imageUrl,
-                            `<h3>${city.name}</h3><p>${city.description}</p><p>${formattedDate} ${formattedTime}</p>`
-                        );
+                        createResultDiv(resultContainer, city.imageUrl, `<h3>${city.name}</h3><p>${city.description}</p><p>${formattedDate} ${formattedTime}</p>`);
                     });
                 });
             }); else {
