@@ -37,7 +37,7 @@ function searchLocation() {
 
     fetch('travel_recommendation_api.json')
         .then(response => {
-            console.log("accessed file");
+            console.log("Accessed file");
             return response.json();
         })
         .then(data => {
@@ -56,9 +56,17 @@ function searchLocation() {
                     createResultDiv(resultContainer, temple.imageUrl, `<h3>${temple.name}</h3><p>${temple.description}</p><p>${formattedDate} ${formattedTime}</p>`);
                 });
             } else if (input.includes('country')) {
+                // Iterate through all countries and show their cities
                 data.countries.forEach(country => {
-                    foundResults = true;
-                    createResultDiv(resultContainer, country.imageUrl, `<h3>${country.name}</h3><p>${country.description}</p><p>${formattedDate} ${formattedTime}</p>`);
+                    country.cities.forEach(city => {
+                        foundResults = true; // Set foundResults to true
+                        createResultDiv(
+                            resultContainer,
+                            city.imageUrl,
+                            `<h3>${city.name}</h3><p>${city.description}</p><p>Timezone: ${city.timeZone}</p>`
+                        );
+                    });
+                });
             } else {
                 const foundCountry = data.countries.find(country =>
                     country.name.toLowerCase() === input
@@ -73,20 +81,18 @@ function searchLocation() {
             }
 
             if (!foundResults) {
-                    const noResultDiv = document.createElement('div');
-                    noResultDiv.className = 'noResult';
-                    noResultDiv.innerHTML = 'No results found';
-
-                    resultContainer.appendChild(noResultDiv);
-                }
+                const noResultDiv = document.createElement('div');
+                noResultDiv.className = 'noResult';
+                noResultDiv.innerHTML = 'No results found';
+                resultContainer.appendChild(noResultDiv);
+            }
         })
         .catch(error => {
             console.error('Error:', error);
             const errorResultDiv = document.createElement('div');
-                    errorResultDiv.className = 'noResult';
-                    errorResultDiv.innerHTML = 'An error occurred while fetching data.';
-
-                    resultContainer.appendChild(errorResultDiv);
+            errorResultDiv.className = 'noResult';
+            errorResultDiv.innerHTML = 'An error occurred while fetching data.';
+            resultContainer.appendChild(errorResultDiv);
         });
 }
 
