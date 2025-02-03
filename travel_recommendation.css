@@ -187,6 +187,28 @@ h2{
     background-color: #461af3f4;
 }
 
+.secondaryBtn{
+    background-color: #0a032700;
+    font-size: 14px;
+    border-radius: 40px;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: 1px solid white;
+    color: white;
+    margin-top: 12px;
+}
+
+.secondaryBtn:hover{
+    background-color: #3d1acaf4;
+}
+
+.secondaryBtn:active{
+    background-color: #461af3f4;
+}
+
+
 #aboutPage{
     display: flex;
     flex-direction: column;
@@ -305,7 +327,7 @@ form{
 }
 .result{
     width: 500px;
-    height: 220px;
+    height: 360px;
     border: 1px solid white;
     border-radius: 12px;
     overflow: hidden;
@@ -317,6 +339,19 @@ form{
 
 .result img {
     width: 100%;             /* Scale the width to 100% of parent */
-    height: 30%;            /* Scale the height to 100% of parent */
+    height: 60%;            /* Scale the height to 100% of parent */
     object-fit: cover;       /* Cover the entire div area */
+}
+
+.resultContent{
+    padding: 12px;
+}
+
+.resultContent h3{
+    line-height: 0%;
+}
+
+.resultContent p{
+    line-height: 20px;
+    margin: 0;
 }
