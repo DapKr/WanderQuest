@@ -56,10 +56,10 @@ function searchLocation() {
                     createResultDiv(resultContainer, temple.imageUrl, `<h3>${temple.name}</h3><p>${temple.description}</p><p>${formattedDate} ${formattedTime}</p>`);
                 });
             } else if (input.includes('country')) {
-                // Iterate through all countries and show their cities
                 data.countries.forEach(country => {
                     country.cities.forEach(city => {
-                        foundResults = true; // Set foundResults to true
+                        foundResults = true;
+                        const { formattedDate, formattedTime } = getLocalTime(city.timeZone);
                         createResultDiv(
                             resultContainer,
                             city.imageUrl,
